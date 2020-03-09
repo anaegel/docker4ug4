@@ -1,15 +1,19 @@
 #!/bin/bash
 arg_checker() {
+    if [ "$OPTIONS" = "" ]; then
+        help
+        exit 1
+    fi
     for o in $OPTIONS; do
         case $o in
-            help)
-                help
-                ;;
             install)
                 install_docker
                 ;;
             remove)
                 remove_docker
+                ;;
+            *)
+                help
                 ;;
         esac
     done
@@ -68,9 +72,9 @@ remove_docker(){
 
 #help
 help() {
-    printf "Usage: ./script option\n"
+    printf "Usage: ./script [option]\n"
     printf "Options:\n"
-    printf "\r help: display this help page\n"
+    printf "\r help: display this help page\n" #this is actually not true but hey
     printf "\r install: install docker\n"
     printf "\r remove: Remove docker and all of its components\n"
 }

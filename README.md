@@ -1,7 +1,8 @@
 # Getting Started with Docker and UG4
 Docker is a tool to containerize applications. This means that applications run in a docker container live in their own subsystem (container) and have no impact on your host os (Windows e.g.). This allows you to experiment within your docker container as you wish without ever having to fear to break your computer. 
 
-## Install Docker on Linux
+## Install Docker on Ubuntu
+run `$ sudo ./ubuntu.sh install` 
 
 ## Install Docker on Mac
 [Download](https://hub.docker.com/editions/community/docker-ce-desktop-mac) the newest Version of Docker Hub and follow the install instructions given there.
