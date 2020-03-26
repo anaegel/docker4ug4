@@ -1,20 +1,18 @@
 # Getting Started with Docker and UG4
 Docker is a tool to containerize applications. This means that applications run in a docker container live in their own subsystem (container) and have no impact on your host os (Windows e.g.). This allows you to experiment within your docker container as you wish without ever having to fear to break your computer. 
 
-## Install Docker on Ubuntu
-run `$ sudo ./ubuntu.sh install` 
+### Install Docker on Ubuntu
+run `$ sudo ./ubuntu.sh install`
 
-## Install Docker on Mac
+### Install Docker on Mac
 [Download](https://hub.docker.com/editions/community/docker-ce-desktop-mac) the newest Version of Docker Hub and follow the install instructions given there.
 
-## Install Docker on Windows Home
+### Install Docker on Windows Home
 Get the [boot2docker image](https://github.com/boot2docker/boot2docker/releases) as well as VMWare or VirtualBox. Create a new Wirtual Machine and boot from the boot2docker image.
 
-## Install Docker on Windows Pro / Enterprise
+### Install Docker on Windows Pro / Enterprise
 [Download](https://hub.docker.com/editions/community/docker-ce-desktop-windows) the newest Version of Docker Hub and follow the install instructions given there.
 
-## Other ways to run Docker
-You can boot from the [boot2docker image](https://github.com/boot2docker/boot2docker/releases)
 ## Docker basics
 docker provides a cli with a lot of functionality but if you only want to run ug4, you just need the following two
 
@@ -29,6 +27,4 @@ docker provides a cli with a lot of functionality but if you only want to run ug
     + `-w` set the workspace for the container   
 
 ## Run ug4 in Docker
-Start Docker on your machine and execute eg `docker run --rm -it --cpu 2 -w $HOME/ug_scripts ugshell`. You then can access the ugshell as normal
-
-## Some more in depth stuff
+Start Docker on your machine, build the Dockerfile with e.g. `$ docker build -t ugshell` and run the image with e.g. `docker run --rm -it --cpu 2 -w $HOME/ug_scripts ugshell`. You then can access the ugshell as normal.
