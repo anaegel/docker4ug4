@@ -15,9 +15,8 @@ Get the [boot2docker image](https://github.com/boot2docker/boot2docker/releases)
 
 ## Docker basics
 docker provides a cli with a lot of functionality but if you only want to run ug4, you just need the following two
-
-* `docker pull <image>` downloads the given image from [Docker Hub](https://hub.docker.com/search)
-+ `docker run <image>` starts a container from the given image, usefull options:
++ `$ docker pull <image>` downloads the given image from [Docker Hub](https://hub.docker.com/search)
++ `$ docker run <image>` starts a container from the given image, usefull options:
     + `--rm` deletes the container once you stop it
     + `-it` starts an interactive shell within the container and enters it
     + `--cpus` runs the container on a given amount of cpus
@@ -27,4 +26,4 @@ docker provides a cli with a lot of functionality but if you only want to run ug
     + `-w` set the workspace for the container   
 
 ## Run ug4 in Docker
-Start Docker on your machine, build the Dockerfile with e.g. `$ docker build -t ugshell` and run the image with e.g. `docker run --rm -it --cpu 2 -w $HOME/ug_scripts ugshell`. You then can access the ugshell as normal.
+Start Docker on your machine, build the Dockerfile with e.g. `$ docker build -t ugshell` and run the image with e.g. `$ docker run --rm -it --cpu 2 -w $HOME/ug_scripts ugshell`. You then can access the ugshell as normal.
